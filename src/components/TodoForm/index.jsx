@@ -9,8 +9,14 @@ const TodoForm = ({ text, handleInput, handleSubmit }) => {
         placeholder="text..."
         value={text}
         onChange={(e) => handleInput(e.target.value)}
+        className={styles.todo__input}
       />
-      <button onClick={handleSubmit}>add todo</button>
+      <button
+        onClick={handleSubmit}
+        className={styles.todo__btn}
+      >
+        add todo
+      </button>
     </label>
   )
 }

@@ -1,0 +1,23 @@
+.TodoItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+  margin-bottom: 15px;
+}
+.todo__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #eaeaea;
+  gap: 20px;
+  font-size: 20px;
+}
+.delete {
+  color: #eaeaea;
+  cursor: pointer;
+}
+input:checked + span {
+  text-decoration: line-through;
+}

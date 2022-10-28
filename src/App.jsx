@@ -38,6 +38,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1 className="logo">TodoList</h1>
       <TodoForm
         text={text}
         handleInput={setText}

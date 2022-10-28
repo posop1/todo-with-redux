@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.todo__input {
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 5px 15px;
+  font-size: 17px;
+  margin-bottom: 15px;
+  outline: none;
+}
+.todo__btn {
+  background-color: #1f1f1f;
+  color: #eaeaea;
+  padding: 10px 0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background: #eaeaea;
+    color: #1f1f1f;
+  }
+}
