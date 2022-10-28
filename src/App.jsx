@@ -21,6 +21,18 @@ const App = () => {
   const removeTodo = (todoId) => {
     setTodos(todos.filter((todo) => todo.id !== todoId))
   }
+  const toggleTodo = (todoId) => {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id !== todoId) return todo
+
+        return {
+          ...todo,
+          comleted: !todo.comleted
+        }
+      })
+    )
+  }
 
   return (
     <div className="App">
@@ -40,6 +52,7 @@ const App = () => {
             <input
               type="checkbox"
               checked={todo.comleted}
+              onChange={() => toggleTodo(todo.id)}
             />
             <span>{todo.text}</span>
             <span
