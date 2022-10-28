@@ -7,7 +7,6 @@ const App = () => {
 
   const addTodo = (e) => {
     if (text.trim().length) {
-      e.preventDefault()
       setTodos([
         ...todos,
         {
@@ -18,6 +17,9 @@ const App = () => {
       ])
       setText('')
     }
+  }
+  const removeTodo = (todoId) => {
+    setTodos(todos.filter((todo) => todo.id !== todoId))
   }
 
   return (
@@ -35,9 +37,17 @@ const App = () => {
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              checked={todo.comleted}
+            />
             <span>{todo.text}</span>
-            <span style={{ color: 'red' }}>&times;</span>
+            <span
+              className="delete"
+              onClick={() => removeTodo(todo.id)}
+            >
+              &times;
+            </span>
           </li>
         ))}
       </ul>

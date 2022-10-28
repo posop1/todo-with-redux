@@ -11,4 +11,10 @@ li {
   justify-content: space-between;
   min-width: 150px;
   align-items: center;
+  margin: 10px 0;
+}
+.delete {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
 }
