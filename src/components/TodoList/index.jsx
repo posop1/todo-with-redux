@@ -11,7 +11,7 @@ const TodoList = () => {
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}
-          todo={todos}
+          {...todo}
         />
       ))}
     </ul>

@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const todoSlice = createSlice({
   name: 'todos',
   initialState: {
-    todos: []
+    todos: [{ id: 1, text: 'asd', completed: false }]
   },
   reducers: {
     addTodo(state, action) {
@@ -15,11 +15,11 @@ const todoSlice = createSlice({
       })
     },
     removeTodo(state, action) {
-      const toggledTodo = state.todos.find((todo) => todo.id === action.payload.id)
-      toggledTodo.completed = !toggledTodo.completed
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id)
     },
     toggleTodo(state, action) {
-      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id)
+      const toggledTodo = state.todos.find((todo) => todo.id === action.payload.id)
+      toggledTodo.completed = !toggledTodo.completed
     }
   }
 })
