@@ -1,22 +1,26 @@
 import React from 'react'
 import { BsFillTrashFill } from 'react-icons/bs'
+import { useDispatch } from 'react-redux'
+import { removeTodo, toggleTodo } from '../../../redux/slices/todoSlice'
 import styles from './TodoItem.module.scss'
 
-const TodoItem = ({ todo, toggleTodo, removeTodo }) => {
+const TodoItem = ({ id, text, comleted }) => {
+  const dispatch = useDispatch()
+
   return (
     <li className={styles.TodoItem}>
       <div className={styles.todo__container}>
         <input
           type="checkbox"
-          checked={todo.comleted}
-          onChange={() => toggleTodo(todo.id)}
+          checked={comleted}
+          onChange={() => dispatch(toggleTodo({ id }))}
         />
-        <span>{todo.text}</span>
+        <span>{text}</span>
       </div>
       <div>
         <BsFillTrashFill
           className={styles.delete}
-          onClick={() => removeTodo(todo.id)}
+          onClick={() => dispatch(removeTodo({ id }))}
         >
           &times;
         </BsFillTrashFill>
