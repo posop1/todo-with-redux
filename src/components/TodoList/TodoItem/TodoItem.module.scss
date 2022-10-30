@@ -4,18 +4,29 @@
   align-items: center;
   justify-content: space-between;
   min-width: 200px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  min-width: 350px;
+  max-width: 350px;
+  width: 100%;
+  border: 2px solid #eaeaea;
+  transition: 0.1s ease-in-out;
+  color: #eaeaea;
+
+  &:hover {
+    background: #eaeaea;
+    color: #080808;
+  }
 }
 .todo__container {
   display: flex;
   align-items: center;
   flex-direction: row;
-  color: #eaeaea;
   gap: 20px;
   font-size: 20px;
 }
 .delete {
-  color: #eaeaea;
   cursor: pointer;
 }
 input:checked + span {

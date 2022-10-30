@@ -15,7 +15,7 @@ const TodoForm = ({ value, updateText, handleAction }) => {
         onClick={handleAction}
         className={styles.todo__btn}
       >
-        add todo
+        Добавить
       </button>
     </label>
   )

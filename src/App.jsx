@@ -16,14 +16,15 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="logo">TodoList</h1>
+      <h1 className="logo">Список Задач</h1>
       <TodoForm
         value={text}
         updateText={setText}
         handleAction={handleAction}
       />
-
-      <TodoList />
+      <div className="main">
+        <TodoList />
+      </div>
     </div>
   )
 }
