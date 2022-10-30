@@ -21,9 +21,7 @@ const TodoItem = ({ id, text, comleted }) => {
         <BsFillTrashFill
           className={styles.delete}
           onClick={() => dispatch(removeTodo({ id }))}
-        >
-          &times;
-        </BsFillTrashFill>
+        />
       </div>
     </li>
   )

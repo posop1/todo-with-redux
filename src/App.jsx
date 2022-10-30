@@ -10,7 +10,7 @@ const App = () => {
   const dispatch = useDispatch()
 
   const handleAction = () => {
-    dispatch(addTodo(text))
+    dispatch(addTodo({ text }))
     setText('')
   }
 
