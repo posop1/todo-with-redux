@@ -1,15 +1,11 @@
 .TodoItem {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 200px;
+  flex-direction: row;
   margin-bottom: 20px;
   padding: 10px 15px;
   border-radius: 15px;
-  min-width: 350px;
-  max-width: 350px;
-  width: 100%;
   border: 2px solid #eaeaea;
   transition: 0.1s ease-in-out;
   color: #eaeaea;

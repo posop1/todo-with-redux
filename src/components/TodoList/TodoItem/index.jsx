@@ -8,7 +8,7 @@ const TodoItem = ({ id, text, comleted }) => {
   const dispatch = useDispatch()
 
   return (
-    <li className={styles.TodoItem}>
+    <div className={styles.TodoItem}>
       <div className={styles.todo__container}>
         <input
           type="checkbox"
@@ -23,7 +23,7 @@ const TodoItem = ({ id, text, comleted }) => {
           onClick={() => dispatch(removeTodo({ id }))}
         />
       </div>
-    </li>
+    </div>
   )
 }
 

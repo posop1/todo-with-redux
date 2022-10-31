@@ -1,9 +1,12 @@
 .form {
   display: flex;
   flex-direction: column;
+  max-width: 350px;
+  width: 100%;
 }
 .todo__input {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
   border: 2px solid black;
   border-radius: 15px;
